@@ -3,8 +3,24 @@ package org.example;
 import java.io.*;
 import java.net.*;
 
+/**
+ * Servidor que responde a preguntas del cliente con frases de la canción de Pimpinela,
+ * siempre y cuando el cliente responda correctamente.
+ *
+ * @author Alberto Bernet
+ */
+
 public class Servidor {
+
+    /**
+     * Inicia el servidor y gestiona la comunicación con el cliente.
+     *
+     * @param args Argumentos de la linea de comandos.
+     */
     public static void main(String[] args) {
+        /**
+         * Puerto en el que el servidor escucha conexiones.
+         */
         int puerto = 5000;
 
         try (ServerSocket servidor = new ServerSocket(puerto)) {

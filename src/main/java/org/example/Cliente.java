@@ -3,9 +3,27 @@ package org.example;
 import java.io.*;
 import java.net.*;
 
+/**
+ * Cliente que se conecta a un servidor y mantiene una conversación con este, basada en la canción de Pimpinela.
+ * Envía preguntas y recibe respuestas del sevidor hasta completar el diálogo.
+ *
+ * @author Alberto Bernet
+ */
 public class Cliente {
+
+    /**
+     * Inicia la conexión con el servidor y gestiona la conversación.
+     *
+     * @param args Argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
+        /**
+         * Dirección del servidor.
+         */
         String host = "localhost";
+        /**
+         * Puerto en el que el servidor espera nuestra pregunta
+         */
         int puerto = 5000;
 
         try (Socket socket = new Socket(host, puerto)) {
