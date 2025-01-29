@@ -8,7 +8,7 @@ public class Servidor {
         int puerto = 5000;
 
         try (ServerSocket servidor = new ServerSocket(puerto)) {
-            System.out.println("Servidor esperando conexión en el puerto " + puerto + "...");
+            System.out.println("Servidor esperando al cliente");
             Socket socket = servidor.accept();
             System.out.println("Cliente conectado!");
 
